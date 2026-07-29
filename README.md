@@ -10,12 +10,11 @@ No demonstration data is sent to a server.
 
 ## GitHub Pages
 
-The `deploy-acta-website.yml` workflow publishes this directory whenever a
-change under `website/` is pushed to `master`.
+The production website is published from the public
+[`bryangdsn/acta-website`](https://github.com/bryangdsn/acta-website)
+repository. Keeping the website release separate lets the application
+repository remain private while the static site uses free GitHub Pages hosting.
 
-For the first deployment, select **GitHub Actions** as the source under:
-
-`Repository settings → Pages → Build and deployment`
-
-The generated `github.io` address can later be replaced with a custom domain by
-adding the domain in the same settings page and creating a `CNAME` file here.
+The live address is
+[`https://bryangdsn.github.io/acta-website/`](https://bryangdsn.github.io/acta-website/).
+It can later use a custom domain through the public repository's Pages settings.
