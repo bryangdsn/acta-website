@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c263d" />
+    <title>Acta Interactive Demo</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body class="demo-body">
+    <section class="demo-gate" id="demo-gate">
+      <a class="brand demo-home" href="index.html">
+        <span class="brand-mark">A</span><span>ACTA</span>
+      </a>
+      <div class="gate-card">
+        <span class="kicker dark">Interactive environment</span>
+        <h1>Explore Acta<br />without leaving a trace.</h1>
+        <p>
+          Start with fictional project data, try common workflows and switch
+          between user perspectives. Everything resets when you sign out or
+          close this browser tab.
+        </p>
+        <div class="demo-rules">
+          <span><b>✓</b> No API connection</span>
+          <span><b>✓</b> No permanent storage</span>
+          <span><b>✓</b> Fictional records only</span>
+        </div>
+        <label>
+          Start as
+          <select id="gate-role">
+            <option value="Delivery Lead">Delivery Lead</option>
+            <option value="Quality Approver">Quality Approver</option>
+            <option value="Construction Owner">Construction Owner</option>
+            <option value="Vendor Coordinator">Vendor Coordinator</option>
+          </select>
+        </label>
+        <button class="button" id="launch-demo" type="button">
+          Enter the demonstration
+        </button>
+        <small>
+          Do not enter real, personal, confidential or regulated information.
+        </small>
+      </div>
+      <div class="gate-art">
+        <div class="gate-ring r1"></div>
+        <div class="gate-ring r2"></div>
+        <div class="gate-record record-one">
+          <span>Execution readiness</span><strong>87%</strong>
+          <i><b style="width: 87%"></b></i>
+        </div>
+        <div class="gate-record record-two">
+          <span>Controlled decision</span><strong>Approved ✓</strong>
+          <small>Electronically signed</small>
+        </div>
+        <div class="gate-record record-three">
+          <span>Open constraints</span><strong>4</strong>
+          <small>2 due this week</small>
+        </div>
+      </div>
+    </section>
+
+    <div class="demo-app" id="demo-app" hidden>
+      <div class="demo-banner">
+        <strong>Demonstration environment</strong>
+        <span>Fictional data · Browser session only · Resets on sign out</span>
+        <button id="reset-demo" type="button">Reset data</button>
+      </div>
+      <aside class="demo-sidebar">
+        <a class="brand demo-brand" href="index.html">
+          <span class="brand-mark">A</span><span>ACTA</span>
+        </a>
+        <nav id="demo-nav">
+          <button class="active" data-view="overview"><i>⌂</i><span>My work</span></button>
+          <button data-view="planning"><i>↗</i><span>Planning</span></button>
+          <button data-view="tiers"><i>⇧</i><span>Tier boards</span></button>
+          <button data-view="documents"><i>▤</i><span>Documents</span></button>
+          <button data-view="safety"><i>◇</i><span>Safety</span></button>
+          <button data-view="construction"><i>▦</i><span>Construction</span></button>
+          <button data-view="analytics"><i>⌁</i><span>Analytics</span></button>
+        </nav>
+        <div class="demo-sidebar-foot">
+          <span>Acta demonstration</span>
+          <small>Session data is temporary</small>
+        </div>
+      </aside>
+      <main class="demo-main">
+        <header class="demo-header">
+          <div>
+            <small id="demo-breadcrumb">Execution / My work</small>
+            <h1 id="demo-title">My work</h1>
+          </div>
+          <div class="demo-header-tools">
+            <label>
+              <span>Project</span>
+              <select id="project-switcher">
+                <option>Dublin Programme · Production</option>
+                <option>Dublin Programme · Test</option>
+                <option>Expansion Sandbox</option>
+              </select>
+            </label>
+            <label>
+              <span>View as</span>
+              <select id="role-switcher">
+                <option>Delivery Lead</option>
+                <option>Quality Approver</option>
+                <option>Construction Owner</option>
+                <option>Vendor Coordinator</option>
+              </select>
+            </label>
+            <button class="demo-notification" type="button" title="Notifications">●</button>
+            <button class="demo-avatar" id="demo-profile" type="button">DL</button>
+            <button class="demo-signout" id="demo-signout" type="button">Sign out</button>
+          </div>
+        </header>
+        <section class="demo-view" id="demo-view"></section>
+      </main>
+      <div class="demo-toast" id="demo-toast" role="status"></div>
+    </div>
+    <script src="demo.js"></script>
+  </body>
+</html>
