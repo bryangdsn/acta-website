@@ -1,4 +1,4 @@
-const DEMO_KEY = "acta-demo-session-v1";
+const DEMO_KEY = "bygo-demo-session-v1";
 
 const seed = {
   role: "Delivery Lead",
@@ -231,7 +231,7 @@ document.querySelector("#role-switcher").addEventListener("change", (event) => {
   document.querySelector("#demo-avatar").textContent = initials(state.role);
   save();
   render();
-  showToast(`Viewing Acta as ${state.role}.`);
+  showToast(`Viewing Bygo as ${state.role}.`);
 });
 
 document.querySelector("#project-switcher").addEventListener("change", (event) => {
